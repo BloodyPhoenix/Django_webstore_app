@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+
+{% extends 'login_logout_header.html' %}
+
+{% load i18n %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+<h1>{{shop.name}}</h1>
+<h4>{{shop.full_description}}</h4>
+<hr>
+    {% for goods in goods_list %}
+        <ul class="goods_properties">
+            <li>{%trans "Название: " %}<a href="{{goods.vendor_code}}">{{goods.name}}</a></li>
+            <li>{%trans "Категория: " %}{{goods.category.category_name}}</li>
+            <li>{%trans "Цена: " %}{{goods.price}}</li>
+            <li>{% trans "Артикул: " %}{{goods.vendor_code}}</li>
+            {% if goods.rating %}
+                <li>{%trans "Рейтинг: " %}{{ goods.rating }}</li>
+            {% else %}
+                <li>{% trans "У этого товара ещё нет оценок" %}</li>
+        </ul>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
+</body>
+</html>

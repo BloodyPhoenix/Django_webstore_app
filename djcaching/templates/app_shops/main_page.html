@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+
+{% extends 'lang_header.html' %}
+
+{% load i18n %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% trans "Главная страница" %}</title>
+</head>
+<body>
+{% block content %}
+<h3>{% trans 'Добро пожаловать на наш сайт, где вы можете найти огромное количество товаров по самым низким ценам!' %}</h3>
+{% if request.user.is_authenticated %}
+    <p>{% trans 'Ваш профиль, ' %}<a href="user_profile/{{request.user.username}}">{{request.user.user_profile.first_name}} {{request.user.user_profile.surname}}</a></p>
+    <p><a href="/logout">{% trans "Выйти" %}</a></p>
+{% else %}
+    <p>{%trans 'Чтобы совершать покупки, необходимо пройти ' %}<a href='login'>{% trans 'аутентификацию' %}</a> или
+    <a href='registration'>{%trans 'зарегистрироваться' %}</a></p>
+{% endif %}
+{% for shop in shops_list %}
+    <p><a href="/shops/{{ shop.name }}">{{ shop.name }}</a></p>
+    <p>{{ shop.short_description }}</p>
+    {% if shop.rating %}
+        <p>{{ shop.rating }}</p>
+    {% else %}
+        <p>{% trans "У этого магазина ещё нет оценок" %}</p>
+    {% endif %}
+{% endfor %}
+{% endblock %}
+</body>
+</html>

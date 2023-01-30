@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+
+{% extends 'login_logout_header.html' %}
+
+{% load i18n %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% trans "Список товаров по запросу" %}"{{goods_name}}"</title>
+</head>
+<body>
+{% block content %}
+    <p>{% trans "Список товаров по запросу" %} "{{goods_name}}"</p>
+    {% if goods_list %}
+        {% for goods in goods_list %}
+            {{ goods.name }}
+            <a href="/shops/{{ goods.shop.name }}/">{{ goods.shop.name }}</a>
+            {{ goods.price }}
+        {% endfor %}
+    {% else %}
+        {% trans "По вашему запросу ничего не найдено" %}
+    {% endif %}
+{% endblock %}
+</body>
+</html>

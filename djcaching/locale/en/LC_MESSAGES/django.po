@@ -1,0 +1,387 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-16 12:53+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: app_shops/apps.py:7 app_shops/models.py:33
+msgid "Магазины"
+msgstr "Shops"
+
+#: app_shops/models.py:7
+msgid "Количество оценок 1"
+msgstr "Number of ratings 1"
+
+#: app_shops/models.py:8
+msgid "Количество оценок 2"
+msgstr "Number of ratings 2"
+
+#: app_shops/models.py:9
+msgid "Количество оценок 3"
+msgstr "Number of ratings 3"
+
+#: app_shops/models.py:10
+msgid "Количество оценок 4"
+msgstr "Number of ratings 4"
+
+#: app_shops/models.py:11
+msgid "Количество оценок 5"
+msgstr "Number of ratings 5"
+
+#: app_shops/models.py:12
+msgid "Средний рейтинг"
+msgstr "Average rating"
+
+#: app_shops/models.py:15
+msgid "Средний рейтинг: "
+msgstr "Average rating"
+
+#: app_shops/models.py:18
+msgid "Рейтинг"
+msgstr "Rating"
+
+#: app_shops/models.py:19
+msgid "Рейтинги"
+msgstr "Ratings"
+
+#: app_shops/models.py:23
+msgid "Название магазина"
+msgstr "Shop name"
+
+#: app_shops/models.py:24
+msgid "Короткое описание"
+msgstr "Short description"
+
+#: app_shops/models.py:25
+msgid "Краткое описание, которое будет видно на главной странице сайта"
+msgstr "Short description for site main page"
+
+#: app_shops/models.py:26
+msgid "Полное описание"
+msgstr "Full description"
+
+#: app_shops/models.py:27
+msgid "Полное описание, которое будет видно на странице магазина"
+msgstr "Full description for shop page"
+
+#: app_shops/models.py:28 app_shops/models.py:51
+msgid "рейтинг"
+msgstr "rating"
+
+#: app_shops/models.py:32 app_shops/models.py:65
+msgid "Магазин"
+msgstr "Shop"
+
+#: app_shops/models.py:37
+msgid "Категория товара"
+msgstr "Goods category"
+
+#: app_shops/models.py:40
+msgid "Категория товаров"
+msgstr "Goods category"
+
+#: app_shops/models.py:41
+msgid "Категории товаров"
+msgstr "Goods categories"
+
+#: app_shops/models.py:45
+msgid "Название товара"
+msgstr "Goods name"
+
+#: app_shops/models.py:48 templates/app_users/user_profile_page.html:46
+msgid "Артикул"
+msgstr "Vendor code"
+
+#: app_shops/models.py:49
+msgid "Цена"
+msgstr "Price"
+
+#: app_shops/models.py:50
+msgid "Описание товара"
+msgstr "Goods description"
+
+#: app_shops/models.py:55 app_shops/models.py:64
+msgid "Товар"
+msgstr "Goods"
+
+#: app_shops/models.py:56 app_users/models.py:25 app_users/models.py:45
+msgid "Товары"
+msgstr "Goods"
+
+#: app_shops/models.py:61
+msgid "Текст отзыва"
+msgstr "Comment text"
+
+#: app_shops/models.py:62
+msgid "Автор"
+msgstr "Author"
+
+#: app_shops/models.py:63
+msgid "Имя автора"
+msgstr "Author's name"
+
+#: app_shops/models.py:68
+msgid "Комментарий"
+msgstr "Comment"
+
+#: app_shops/models.py:69
+msgid "Комментарии"
+msgstr "Comments"
+
+#: app_shops/models.py:74 app_shops/models.py:76 app_shops/models.py:78
+msgid "Персональные акции и предложения"
+msgstr "Personal offers"
+
+#: app_shops/models.py:79
+msgid "Размер скидки"
+msgstr "Discount amount"
+
+#: app_users/apps.py:7
+msgid "Пользователи"
+msgstr "Users"
+
+#: app_users/forms.py:14 app_users/models.py:9
+msgid "Имя"
+msgstr "Name"
+
+#: app_users/forms.py:15 app_users/models.py:10
+msgid "Фамилия"
+msgstr "Surname"
+
+#: app_users/forms.py:16 app_users/models.py:16
+msgid "Страна"
+msgstr "Country"
+
+#: app_users/forms.py:17 app_users/models.py:17
+msgid "Город"
+msgstr "City"
+
+#: app_users/forms.py:18 app_users/models.py:18
+msgid "Улица"
+msgstr "Street"
+
+#: app_users/forms.py:20
+msgid "Номер квартиры"
+msgstr "Flat number"
+
+#: app_users/models.py:19
+msgid "Дом"
+msgstr "House"
+
+#: app_users/models.py:20
+msgid "Квартира"
+msgstr "Flat"
+
+#: app_users/models.py:41
+msgid "Пользователь"
+msgstr "User"
+
+#: app_users/models.py:46
+msgid "Дата покупки"
+msgstr "Purchase date"
+
+#: app_users/models.py:48
+msgid "Заказ"
+msgstr "Order"
+
+#: app_users/models.py:54
+msgid "Баланс"
+msgstr "Balance"
+
+#: app_users/models.py:55
+msgid "Деньги"
+msgstr "Money"
+
+#: templates/app_shops/goods_page.html:14
+msgid "Описание:"
+msgstr "Description:"
+
+#: templates/app_shops/goods_page.html:16 templates/app_shops/shop_page.html:21
+msgid "Цена: "
+msgstr "Price: "
+
+#: templates/app_shops/goods_page.html:17 templates/app_shops/shop_page.html:22
+msgid "Артикул: "
+msgstr "Vendor code: "
+
+#: templates/app_shops/goods_page.html:20
+msgid "Купить"
+msgstr "Buy"
+
+#: templates/app_shops/goods_page.html:22
+msgid "Назад в магазин"
+msgstr "Back to shop"
+
+#: templates/app_shops/main_page.html:10
+msgid "Главная страница"
+msgstr "Main page"
+
+#: templates/app_shops/main_page.html:14
+msgid ""
+"Добро пожаловать на наш сайт, где вы можете найти огромное количество "
+"товаров по самым низким ценам!"
+msgstr "Welcome to our site where you can find great amount of goods for the lowest prices"
+
+#: templates/app_shops/main_page.html:16
+msgid "Ваш профиль, "
+msgstr "Your profile, "
+
+#: templates/app_shops/main_page.html:17 templates/login_logout_header.html:18
+msgid "Выйти"
+msgstr "Logout"
+
+#: templates/app_shops/main_page.html:19
+msgid "Чтобы совершать покупки, необходимо пройти "
+msgstr "To make purchase you need to "
+
+#: templates/app_shops/main_page.html:19
+msgid "аутентификацию"
+msgstr "login"
+
+#: templates/app_shops/main_page.html:20
+msgid "зарегистрироваться"
+msgstr "sign in"
+
+#: templates/app_shops/main_page.html:28
+msgid "У этого магазина ещё нет оценок"
+msgstr "This shop does not have rating yet"
+
+#: templates/app_shops/shop_page.html:19
+msgid "Название: "
+msgstr "Name: "
+
+#: templates/app_shops/shop_page.html:20
+msgid "Категория: "
+msgstr "Category: "
+
+#: templates/app_shops/shop_page.html:24
+msgid "Рейтинг: "
+msgstr "Rating: "
+
+#: templates/app_shops/shop_page.html:26
+msgid "У этого товара ещё нет оценок"
+msgstr "This goods has no rating yet"
+
+#: templates/app_users/add_address_page.html:10
+#: templates/app_users/add_address_page.html:17
+#: templates/app_users/cart_page.html:10
+#: templates/app_users/user_profile_page.html:69
+msgid "Добавить адрес"
+msgstr "Add address"
+
+#: templates/app_users/cart_page.html:19
+#: templates/app_users/delete_address_page.html:26
+msgid "Удалить"
+msgstr "Delete"
+
+#: templates/app_users/cart_page.html:24
+msgid "Оформить покупку"
+msgstr "Make purchase"
+
+#: templates/app_users/cart_page.html:27
+msgid "Ваша корзина пуста."
+msgstr "Your cart is empty"
+
+#: templates/app_users/delete_address_page.html:10
+#: templates/app_users/user_profile_page.html:31
+msgid "Удалить адрес"
+msgstr "Delete address"
+
+#: templates/app_users/delete_address_page.html:23
+msgid "Действительно удалить этот адрес?"
+msgstr "Are you sure you want to delete this address?"
+
+#: templates/app_users/delete_address_page.html:29
+msgid "Вернуться"
+msgstr "Go back"
+
+#: templates/app_users/register_page.html:10
+msgid "Регистрация нового пользователя"
+msgstr "New user registration"
+
+#: templates/app_users/register_page.html:17
+#: templates/login_logout_header.html:21
+msgid "Зарегистрироваться"
+msgstr "Sign in"
+
+#: templates/app_users/user_profile_page.html:13
+msgid "Страница пользователя"
+msgstr "User page"
+
+#: templates/app_users/user_profile_page.html:17
+msgid "Ваш баланс: "
+msgstr "Your balance: "
+
+#: templates/app_users/user_profile_page.html:28
+msgid "Частный дом"
+msgstr "Private house"
+
+#: templates/app_users/user_profile_page.html:34
+msgid "Адрес не указан. Укажите адрес, чтобы совершать покупки"
+msgstr "There is no address. Add address to make purchase"
+
+#: templates/app_users/user_profile_page.html:40
+msgid "Дата заказа:"
+msgstr "Order date: "
+
+#: templates/app_users/user_profile_page.html:43
+msgid "Название:"
+msgstr "Name:"
+
+#: templates/app_users/user_profile_page.html:44
+msgid "Цена:"
+msgstr "Price:"
+
+#: templates/app_users/user_profile_page.html:45
+msgid "Магазин:"
+msgstr "Shop:"
+
+#: templates/app_users/user_profile_page.html:51
+msgid "Вы ещё ничего не купили."
+msgstr "You haven's bought anything yet"
+
+#: templates/app_users/user_profile_page.html:55
+msgid "Персональные акции и предложения:"
+msgstr "Personal offers"
+
+#: templates/app_users/user_profile_page.html:59
+msgid "Магазин: "
+msgstr "Shop: "
+
+#: templates/app_users/user_profile_page.html:60
+msgid "Товар: "
+msgstr "Goods: "
+
+#: templates/app_users/user_profile_page.html:61
+msgid "Скидка: "
+msgstr "Discount: "
+
+#: templates/app_users/user_profile_page.html:66
+msgid "У вас сейчас нет персональных акций и предложений."
+msgstr "You have no personal offers now."
+
+#: templates/login_logout_header.html:15
+msgid "Корзина"
+msgstr "Cart"
+
+#: templates/login_logout_header.html:17
+msgid "Мой профиль"
+msgstr "My profile"
+
+#: templates/login_logout_header.html:20
+msgid "Войти"
+msgstr "Login"

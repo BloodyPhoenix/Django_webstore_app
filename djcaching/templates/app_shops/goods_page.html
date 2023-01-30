@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+
+{% extends 'login_logout_header.html' %}
+
+{% load i18n %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{goods.name}}</title>
+</head>
+<body>
+{% block content %}
+<p>{% trans "Описание:" %}</p>
+<p>{{goods.description}}</p>
+<p>{% trans "Цена: " %}{{goods.price}}</p>
+<p>{% trans "Артикул: " %}{{goods.vendor_code}}</p>
+<p>{% trans "Количество: " %}{{goods.stock}}</p>
+{% if request.user.is_authenticated %}
+    {% if goods.stock > 0 %}
+        <form method="post">
+            {% csrf_token %}
+            <button>{% trans "Купить" %}</button>
+        </form>
+    {% else %}
+        <p>{% trans "К сожалению, данный товар закончился в этом магазине" %}</p>
+    {% endif %}
+{% endif %}
+<p><a href="{{shop_link}}">{% trans "Назад в магазин" %}</a></p>
+{% endblock %}
+</body>
+</html>

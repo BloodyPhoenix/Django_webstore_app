@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+
+{% extends 'lang_header.html' %}
+
+{% load i18n %}
+
+{% load cache %}
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% trans "Страница пользователя" %} request.user.username</title>
+</head>
+<body>
+{% block content %}
+<p>{% trans "Ваш баланс: " %}{{balance}}</p>
+<p>{% trans "Ваш статус: " %}{{user.status}}</p>
+{% if address_data %}
+    {% for address, delete_link in address_data.items %}
+        <ul>
+            <li>{{address.country}}</li>
+            <li>{{address.town}}</li>
+            <li>{{address.street}}</li>
+            <li>{{address.house}}</li>
+            {% if address.flat %}
+                <li>{{address.flat}}</li>
+            {% else %}
+                <li>{% trans "Частный дом" %}</li>
+              {% endif %}
+        </ul>
+        <a href='{{delete_link}}'><button>{% trans "Удалить адрес" %}</button></a>
+    {% endfor %}
+{% else %}
+    {% trans "Адрес не указан. Укажите адрес, чтобы совершать покупки" %}
+{% endif %}
+{% cache 600 purchase_history %}
+{% block purchase_history %}
+{% if orders %}
+    {% for order in orders %}
+        <p>{% trans "Дата заказа:" %}{{ order.date }}</p>
+        {% for goods in order.goods.all %}
+            <ul>
+                <li>{% trans "Название:" %}{{ goods.name }}</li>
+                <li>{% trans "Цена:" %}{{ goods.price }}</li>
+                <li>{% trans "Магазин:" %}{{ goods.shop }}</li>
+                <li>{% trans "Артикул" %}{{ goods.vendor_code }}</li>
+            </ul>
+        {% endfor %}
+    {% endfor %}
+{% else %}
+    <p>{% trans "Вы ещё ничего не купили." %}</p>
+{% endif %}
+{% endblock %}
+{% endcache %}
+<h4>{% trans "Персональные акции и предложения:" %}</h4>
+{% if  personal_offers %}
+    {% for offer in personal_offers %}
+        <ul>
+            <li>{% trans 'Магазин: ' %}{{ offer.shop.name }}</li>
+            <li>{% trans 'Товар: ' %}{{ offer.goods.name }}</li>
+            <li>{% trans 'Скидка: ' %}{{ offer.discount }}</li>
+        </ul>
+        <p></p>
+    {% endfor %}
+{% else %}
+    {% trans "У вас сейчас нет персональных акций и предложений." %}
+{% endif %}
+<p>
+    <a href='{{add_address_link}}'><button>{% trans 'Добавить адрес' %}</button></a>
+</p>
+{% endblock %}
+</body>
+</html>

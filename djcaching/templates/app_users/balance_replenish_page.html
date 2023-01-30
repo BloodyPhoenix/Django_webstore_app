@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+
+{% extends 'login_logout_header.html' %}
+
+{% load i18n %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% trans "Пополнение баланса счёта" %}</title>
+</head>
+<body>
+{% block content %}
+    <p>{% trans "Сейчас на вашем счету: " %}{{current_balance}}</p>
+    <form method="post">
+        {% csrf_token %}
+        {{ add_form.as_p }}
+        <button type="submit">{% trans 'Пополнить счёт' %}</button>
+    </form>
+{% endblock %}
+</body>
+</html>

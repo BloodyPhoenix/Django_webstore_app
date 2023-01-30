@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+
+{% extends 'login_logout_header.html' %}
+
+{% load i18n %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% trans "Подтверждение покупки" %}</title>
+</head>
+<body>
+{% block content %}
+    <p>{% trans "Ваша покупка успешно совершена!" %}</p>
+    <p>{% trans "Ваш заказ:" %}</p>
+    {% for goods in last_order %}
+        {% for key, value in goods.items %}
+            <p>{{key}}: {{value}}</p>
+        {% endfor %}
+    {% endfor %}
+    <a href="/"><button>{% trans "На главную" %}</button></a>
+    <a href="{{user_link}}"><button>{% trans "Мой профиль" %}</button></a>
+{% endblock %}
+</body>
+</html>

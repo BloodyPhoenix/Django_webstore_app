@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+
+{% extends 'lang_header.html' %}
+
+{% load i18n %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% trans "Страница входа" %}</title>
+</head>
+<body>
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">{% trans "Войти" %}</button>
+    </form>
+{% endblock %}
+</body>
+</html>

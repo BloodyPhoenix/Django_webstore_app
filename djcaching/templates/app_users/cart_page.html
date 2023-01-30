@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+
+{% extends 'login_logout_header.html' %}
+
+{% load i18n %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% trans "Добавить адрес" %}</title>
+</head>
+<body>
+{% block content %}
+    <p>{% trans "Ваш баланс: " %}{{money}}</p>
+    {% if goods %}
+        {% for one_good, delete_link in goods.items %}
+            {{ one_good.name }}
+            {{ one_good.price }}
+            <p></p>
+            <a href="delete_link"><button>{% trans "Удалить" %}</button></a>
+            <hr>
+        {% endfor %}
+        {% trans "Общаястоимость покупки: " %}{{price}}
+        {% if not_enough_money %}
+            <p>{% trans "У вас недостаточно средств для того, чтобы совершить покупку" %}</p>
+            <p>{% trans "Пожалуйста, " %} <a href="">{% trans "Пополните баланс" %}</a> </p>
+        {% else %}
+            <form method="post">
+                {% csrf_token %}
+            <a href="purchase_confirmation"><button>{% trans "Оформить покупку" %}</button></a>
+            </form>
+        {% endif %}
+    {% else %}
+        <p>{% trans "Ваша корзина пуста." %}</p>
+    {% endif %}
+{% endblock %}
+</body>
+</html>
